@@ -1,0 +1,105 @@
+/* COMMON (공통) */
+body {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+img{
+  display: block; /*이미지를 글자 취급 안하는 법.*/
+}
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+header{
+  background-color: #f6f5f0;
+  border-bottom: 1px solid #c8c8c8;
+}
+header .inner{
+  width: 1100px;
+  height: 120px;
+  margin: 0 auto;
+  position: relative; /*무조건 포지션 앱솔루트 위에 있어야합니다.(logo라는 클래스가 inner 안에 있어서)*/
+}
+header .logo {
+  height: 75px; /*이미지의 정확한 높이*/
+  position: absolute; /* 부모요소 확인 필수 (배치) */
+  top: 0;
+  bottom: 0;
+  left:0;
+  margin: auto;
+  /*display: none;  /*화면에서 잠깐 사라지게*/
+}
+header .sub-menu {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: flex;
+}
+header .sub-menu ul.menu {
+  font-family: Arial, sans-serif; /*sans-serif (사용자의 컴퓨터 안에서 자동으로 )*/
+  display: flex;  /*수평으로 만들기*/
+}
+header .sub-menu ul.menu li {
+  position: relative;
+}
+header .sub-menu ul.menu li::before {
+  content: "";  /*지우면 before라는 가상요소 사용 x*/
+  /*display: block; /* 가로세로 값 가질수 있도록*/ /*포지션이 absoulte면 block으로 바뀜*/
+  width: 1px;
+  height: 12px;
+  background-color: #e5e5e5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+header .sub-menu ul.menu li:first-child::before {
+  display: none;
+}
+header .sub-menu ul.menu li a {
+  font-size: 12px;
+  padding: 11px 16px;
+  display: block;
+  color: #656565;
+}
+header .sub-menu ul.menu li a:hover {
+  color: #000;
+}
+header .sub-menu .search {
+  height: 34px;
+  position: relative;
+}
+header .sub-menu .search input {
+  width: 36px;
+  height: 34px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;  /*주변 파란선 삭제*/
+  background-color: #FFF;
+  color: #777;
+  transition: width .4s;  /*0.4초*/
+  font-size: 12px;
+}
+header .sub-menu .search input:focus {
+  width: 190px;
+  border-color: #690;
+}
+header .sub-menu .search .material-icons {
+  height: 24px; /*아이콘의 높이값*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 5px;
+  margin: auto;
+  transition: .4s;
+}
+header .sub-menu .search.focused .material-icons { /*일치 선택자라서 붙여서 쓴거임 .focused*/
+  opacity: 0; /*불투명도 0*/
+
+}
