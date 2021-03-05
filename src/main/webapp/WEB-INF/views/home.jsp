@@ -66,6 +66,56 @@
 			</div>
 		</div>
 
+		<ul class="main-menu">
+			<li class="item"><!-- 마우스를 올리는 메뉴-->
+				<div class="item__name">COFFEE</div>
+				<div class="item__contents">
+					<div class="contents__menu">
+						<div class="inner">
+							COFFEE
+						</div>
+					</div>
+					<div class="contents__texture">
+						<div class="inner"> <!-- 한줄의 컨텐츠를 가운데로 몰아줌 -->
+							COFFEE
+						</div>
+					</div>
+				</div> <!--메뉴 드롭다운-->
+			</li>
+			<li class="item"><!-- 마우스를 올리는 메뉴-->
+				<div class="item__name">MENU</div>
+				<div class="item__contents">
+					<div class="contents__menu"></div>
+					<div class="contents__texture"></div>
+				</div> <!--메뉴 드롭다운-->
+			</li>
+			<li class="item"><!-- 마우스를 올리는 메뉴-->
+				<div class="item__name">STORE</div>
+				<div class="item__contents">
+					<div class="contents__menu"></div>
+					<div class="contents__texture"></div>
+				</div> <!--메뉴 드롭다운-->
+			</li>
+			<li class="item"><!-- 마우스를 올리는 메뉴-->
+				<div class="item__name">RESPONSIBILITY</div>
+				<div class="item__contents">
+
+				</div> <!--메뉴 드롭다운-->
+			</li>
+			<li class="item"><!-- 마우스를 올리는 메뉴-->
+				<div class="item__name">MY STARBUCKS REWARDS</div>
+				<div class="item__contents">
+
+				</div> <!--메뉴 드롭다운-->
+			</li>
+			<li class="item"><!-- 마우스를 올리는 메뉴-->
+				<div class="item__name">WHAT'S NEW</div>
+				<div class="item__contents">
+
+				</div> <!--메뉴 드롭다운-->
+			</li>
+		</ul>
+
 	</div>
 </header>
 
