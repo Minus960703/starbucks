@@ -5,6 +5,7 @@ body {
   font-weight: 400;
   line-height: 1.4;
   font-family: 'Nanum Gothic', sans-serif;
+  height: 3000px;
 }
 img{
   display: block; /*이미지를 글자 취급 안하는 법.*/
@@ -12,17 +13,24 @@ img{
 a {
   text-decoration: none;
 }
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
 
 /* HEADER */
 header{
+  width: 100%;
+  /* position: relative; */
   background-color: #f6f5f0;
   border-bottom: 1px solid #c8c8c8;
+  position: fixed; /*fixed는 width를 최소한으로 사용하기때문에 width:100% 추가*/
+  top: 0;
 }
-header .inner{
-  width: 1100px;
+header > .inner{ /*헤더의 자식요소 이너클래스만  > 이건 자식 선택자 */
   height: 120px;
-  margin: 0 auto;
-  position: relative; /*무조건 포지션 앱솔루트 위에 있어야합니다.(logo라는 클래스가 inner 안에 있어서)*/
+  /*position: relative; /*무조건 포지션 앱솔루트 위에 있어야합니다.(logo라는 클래스가 inner 안에 있어서)*/
 }
 header .logo {
   height: 75px; /*이미지의 정확한 높이*/
@@ -102,4 +110,82 @@ header .sub-menu .search .material-icons {
 header .sub-menu .search.focused .material-icons { /*일치 선택자라서 붙여서 쓴거임 .focused*/
   opacity: 0; /*불투명도 0*/
 
+}
+header .main-menu {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;   /*요소의 쌓임 속성*/
+  display: flex;  /*수평*/
+}
+header .main-menu .item {
+
+}
+header .main-menu .item .item__name {
+  padding: 10px 20px 34px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+header .main-menu .item:hover .item__name {
+  background-color: #2c2a29;
+  color: #690;
+  border-radius: 6px 6px 0 0; /*좌상단 우상단*/
+}
+header .main-menu .item .item__contents {
+  width: 100%;
+  position: fixed; /*뷰포트를 기준..*/
+  left: 0;
+  display: none;
+}
+header .main-menu .item:hover .item__contents {
+  display: block; /*블럭이되어 나타나짐*/
+}
+header .main-menu .item .item__contents .contents__menu {
+  background-color: #2c2a29;  /*높이는 기본값이 auto*/
+}
+header .main-menu .item .item__contents .contents__menu > ul {
+  display: flex;
+  padding: 20px 0;  /*위아래 20 , 옆 안씀*/
+}
+header .main-menu .item .item__contents .contents__menu > ul > li {
+  width: 220px;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li h4 {
+  padding: 3px 0 12px 0;
+  font-size: 14px;
+  color: #fff;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li ul li {
+  padding: 5px 0;
+  font-size: 12px;
+  color: #999;
+  cursor: pointer;   /*마우스 표시가 화살표 -> 손가락*/
+}
+header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
+  color: #690;
+}
+header .main-menu .item .item__contents .contents__texture {
+  padding: 26px 0;
+  font-size: 12px;
+  background-image: url("../images/main_menu_pattern.jpg");
+}
+header .main-menu .item .item__contents .contents__texture h4 {
+  color: #999;
+  font-weight: 700;
+}
+header .main-menu .item .item__contents .contents__texture p {
+  color: #690;
+  margin: 4px 0 14px; /*top = 4 left,right = 0 bottom = 14*/
+}
+header .badges {
+  position: absolute;
+  top: 132px;
+  right: 12px;
+}
+header .badges .badge{
+  border-radius: 10px;
+  overflow: hidden; /*모서리는 깎지만, 이미지는 안깎임. 이미지도 깎게하는법 overflow: hidden*/
+  margin-bottom: 12px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, .15); /*마지막은 불투명도*/
+  cursor: pointer;
 }
