@@ -40,3 +40,13 @@ window.addEventListener('scroll', _.throttle(function () {
     }
 }, 300)); /*300 = 0.3초 0.3초단위로 부하를 줘서 함수 실행되는거 방지*/
 // _.throttle(함수, 시간)
+
+
+
+const fadeEls = document.querySelectorAll('.visual .fade-in');
+fadeEls.forEach(function (fadeEl, index) { /*이름,반복회수*/
+    gsap.to(fadeEl, 1, {
+        delay: (index + 1) * .7, /**순차적으로. 처음은 0, 0 * 0.7 = 0, 1 * 0.7 = 0.7, 2* 0.7 = 1.4 초 뒤 */
+        opacity: 1
+    });  /** 요소, 지속시간, 옵션 */
+});
