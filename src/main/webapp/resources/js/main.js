@@ -50,3 +50,13 @@ fadeEls.forEach(function (fadeEl, index) { /*이름,반복회수*/
         opacity: 1
     });  /** 요소, 지속시간, 옵션 */
 });
+
+
+
+/** new Swiper(선택자 , 옵션) */
+new Swiper('.notice-line .swiper-container', {
+    /** 옵션(객체 데이터 형태) */
+    direction: 'vertical',   /** 방향 수직으로 */
+    autoplay: true,/** 자동 재생 여부 */
+    loop: true  /** 반복 재생 (4번째 이후 1번째로 넘어가는 부분*/
+});   /** 생성자 생성.(new) */

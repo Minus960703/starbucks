@@ -34,6 +34,12 @@
 	<!-- lodash, gsap 오픈 라이브러리-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
 	<script defer src="${pageContext.request.contextPath}/resources/js/main.js"></script>  <!--defer속성 필수-->
 </head>
 
@@ -387,19 +393,19 @@
 	<div class="inner">
 
         <div class="title fade-in">
-            <img src="./images/visual_title.png" alt="STARBUCKS DELIGHTFUL START TO THE YEARS" />
+            <img src="${pageContext.request.contextPath}/resources/images/visual_title.png" alt="STARBUCKS DELIGHTFUL START TO THE YEARS" />
             <a href="javascript:void(0)" class="btn btn--brown">자세히 보기</a>
         </div>
         <div class="fade-in">
-            <img src="./images/visual_cup1.png" alt="new OATMEAL LATTE" class="cup1 image" />
-            <img src="./images/visual_cup1_text.png" alt="오트밀 라떼" class="cup1 text" />
+            <img src="${pageContext.request.contextPath}/resources/images/visual_cup1.png" alt="new OATMEAL LATTE" class="cup1 image" />
+            <img src="${pageContext.request.contextPath}/resources/images/visual_cup1_text.png" alt="오트밀 라떼" class="cup1 text" />
         </div>
         <div class="fade-in">
-            <img src="./images/visual_cup2.png" alt="new STARBUCKS CARAMEL CRUMBLE MOCHA" class="cup2 image">
-            <img src="./images/visual_cup2_text.png" alt="스타벅스 카라멜 크럼블 모카" class="cup2 text" />
+            <img src="${pageContext.request.contextPath}/resources/images/visual_cup2.png" alt="new STARBUCKS CARAMEL CRUMBLE MOCHA" class="cup2 image">
+            <img src="${pageContext.request.contextPath}/resources/images/visual_cup2_text.png" alt="스타벅스 카라멜 크럼블 모카" class="cup2 text" />
         </div>
         <div class="fade-in">
-            <img src="./images/visual_spoon.png" alt="Spoon" class="spoon" />
+            <img src="${pageContext.request.contextPath}/resources/images/visual_spoon.png" alt="Spoon" class="spoon" />
         </div>
 
 	</div>
@@ -416,11 +422,28 @@
 
 			<div class="inner__left">
 				<h2>공지사항</h2>
-				<div class="swiper-container"></div>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="javasciprt:void(0)">크리스마스 & 연말연시 스타벅스 매장 영업시간 변경 안내</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="javasciprt:void(0)">[당첨자 발표] 2021 스타벅스 플래너 영수증 이벤트</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="javasciprt:void(0)">스타벅스커피 코리아 애플리케이션 버전 업데이트 안내</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="javasciprt:void(0)">[당첨자 발표] 뉴이어 전자영수증 이벤트</a>
+						</div>
+					</div>
+				</div>
+
 				<a href="javascript:void(0)" class="notice-line__more">
 					<div class="material-icons">add_circle</div>
 				</a>
 			</div>
+			
 			<div class="inner__right">
 				<h2>스타벅스 프로모션</h2>
 				<div class="toggle-promotion">
