@@ -443,7 +443,7 @@
 					<div class="material-icons">add_circle</div>
 				</a>
 			</div>
-			
+
 			<div class="inner__right">
 				<h2>스타벅스 프로모션</h2>
 				<div class="toggle-promotion">
@@ -452,6 +452,12 @@
 			</div>
 
 		</div>
+
+        <div class="promotion">
+            <div class="swiper-container">
+                TEST!
+            </div>
+        </div>
 	</div>
 
 </section>
