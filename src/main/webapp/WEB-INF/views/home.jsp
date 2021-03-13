@@ -455,7 +455,7 @@
 
         <div class="promotion">
             <div class="swiper-container">
-                TEST!
+                TEST!1<!-- javascript-->
             </div>
         </div>
 	</div>
