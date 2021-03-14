@@ -60,3 +60,22 @@ new Swiper('.notice-line .swiper-container', {
     autoplay: true,/** 자동 재생 여부 */
     loop: true  /** 반복 재생 (4번째 이후 1번째로 넘어가는 부분*/
 });   /** 생성자 생성.(new) */
+
+new Swiper('.promotion .swiper-container', {
+    /** 스와이퍼 기본값 direction은 horizontal */
+    slidesPerView: 3, //한번에 보여줄 슬라이드 개수
+    spaceBetween: 10, //슬라이드 사이 여백
+    centeredSlides: true, //1번 슬라이드가 가운데 보이기
+    loop: true,
+    autoplay: {
+        delay: 5000  //500 = 0.5초에 한번씩 이미지 슬라이드 (기본값은 3000)
+    },
+    pagination: {
+        el: '.promotion .swiper-pagination',  //페이지 번호 요소 선택자
+        clickable: true //사용자의 페이지 번호 요소 제어 가능 여부 ( 클릭 할 수 있는지 )
+    },
+    navigation: {
+        prevEl: '.promotion .swiper-prev', //이전 슬라이드 보는 버튼
+        nextEl: '.promotion .swiper-next'  //다음 슬라이드 보는 버튼
+    }
+});
