@@ -79,3 +79,17 @@ new Swiper('.promotion .swiper-container', {
         nextEl: '.promotion .swiper-next'  //다음 슬라이드 보는 버튼
     }
 });
+
+const promotionEl = document.querySelector('.promotion');
+const promotionToggleBtn = document.querySelector('.toggle-promotion');
+let isHidePromotion = false;
+promotionToggleBtn.addEventListener('click', function(){
+    isHidePromotion = !isHidePromotion  /** 반대가 되게 만들기 .*/
+    /** false의 반댓값 , true 로 */
+    if (isHidePromotion) {
+        /** 숨김 처리 ! */
+        promotionEl.classList.add('hide');/** hide라는 클래스 추가 */
+    } else { /** false 보임처리*/
+    promotionEl.classList.remove('hide');
+    }
+})

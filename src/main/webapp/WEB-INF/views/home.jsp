@@ -498,6 +498,24 @@
 </section>
 
 
+
+<!-- REWARDS -->
+<section class="rewards">
+    <div class="bg-left"></div>
+    <div class="bg-right"></div>
+    <div class="inner">
+
+        <div class="btn-group">
+            <!-- btn-reverse 버튼 반전 -->
+            <div class="btn btn--reverse sign-up">회원가입</div>
+            <div class="btn sign-in">로그인</div>
+            <div class="btn gift">e-Gift 선물하기</div>
+        </div>
+
+    </div>
+</section>
+
+
 </body>
 
 </html>

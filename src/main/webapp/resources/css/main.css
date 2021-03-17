@@ -380,10 +380,15 @@ header .badges .badge{
   font-size: 30px;
 }
 
-.notice .promotion{
+.notice .promotion {
   height: 693px;
   background-color: #f6f5ef;
   position: relative;
+  transition: height .4s; /*높이 0.4초에 한해서 바뀐다.*/
+  overflow: hidden; /*잘려서 보이게*/
+}
+.notice .promotion.hide {
+  height: 0;
 }
 .notice .promotion .swiper-container {
   width: calc(819px * 3 + 20px);
@@ -460,3 +465,50 @@ header .badges .badge{
   background-color: #333;
   color: #fff;
 }
+
+
+/* REWARDS */
+.rewards {
+  position: relative;
+}
+.rewards .bg-left {
+  width: 50%;
+  height: 100%;
+  background-color: #272727;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.rewards .bg-right {
+  width: 50%;
+  height: 100%;
+  background-color: #d5c798;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.rewards .inner {
+  background-image: url("../images/rewards.jpg");
+  height: 241px;
+}
+.rewards .btn-group {
+  position: absolute; /*부모요소 inner<- 공통선택자에서 position 입력해놓음*/
+  bottom: 24px;
+  right: 0;
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;  /*가로 넓이 높으면 아래로 내려가는 거 허용*/
+}
+.rewards .btn-group .btn.sign-up{
+  margin-right: 10px;
+}
+.rewards .btn-group .btn.sign-in{
+  width: 110px;
+
+}
+.rewards .btn-group .btn.gift {
+  margin-top: 10px;
+  flex-grow: 1; /*최대한의 넓이를 사용*/
+}
+
+
