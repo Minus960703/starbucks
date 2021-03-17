@@ -39,8 +39,8 @@
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-
-	<script defer src="${pageContext.request.contextPath}/resources/js/main.js"></script>  <!--defer속성 필수-->
+    <script defer src="${pageContext.request.contextPath}/resources/js/youtube.js"></script>
+    <script defer src="${pageContext.request.contextPath}/resources/js/main.js"></script>  <!--defer속성 필수-->
 </head>
 
 <body>
@@ -513,6 +513,15 @@
         </div>
 
     </div>
+</section>
+
+
+<!-- YOUTUBE VIDEO -->
+<section class="youtube">
+    <div class="youtube__area">
+        <div id="player"></div>
+    </div>
+    <div class="youtube__cover"></div>
 </section>
 
 
